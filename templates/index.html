@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>Say Hello</title>
+    </head>
+    <body>
+        <h1>RelAIbility - your friendly neighborhood news checker!</h1>
+        <br>
+        <form action="check" method="post">
+            {% for message in get_flashed_messages() %}
+            <p>{{ message }}</p>
+        {% endfor %}
+            <br>
+            <input type="text" name="name_input">
+            <br>
+            <input type="submit" value="Check!" id="check">
+        </form>
+    </body>
+</html>
